@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
 import AutoImport from 'unplugin-auto-import/vite'
-// import Components from 'unplugin-vue-components/vite'
+import Components from 'unplugin-vue-components/vite'
 // import Layouts from 'vite-plugin-vue-layouts'
 // import VueRouter from 'unplugin-vue-router/vite'
 // import { VueRouterAutoImports } from 'unplugin-vue-router'
@@ -27,6 +27,12 @@ export default defineConfig({
             ],
             dirs: ['./src/**'],
             dts: './src/auto-imports.d.ts',
+        }),
+        Components({
+            dirs: ['src/components'],
+            dts: 'src/components.d.ts',
+            deep: true,
+            directoryAsNamespace: true,
         }),
         vue({
             template: {
