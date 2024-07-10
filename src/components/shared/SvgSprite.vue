@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-
 const props = defineProps({ name: String })
 
 const spritePath = ref<string | null>(null)

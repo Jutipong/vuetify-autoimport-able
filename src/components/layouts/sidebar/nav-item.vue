@@ -1,7 +1,5 @@
 <script setup>
-import { onMounted, ref } from 'vue'
 import { string } from 'yup'
-import SvgSprite from '@/components/shared/SvgSprite.vue'
 
 const props = defineProps({ item: Object, level: Number })
 

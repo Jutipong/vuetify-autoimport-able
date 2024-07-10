@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import SvgSprite from '@/components/shared/SvgSprite.vue'
-
 interface Breadcrumb {
     title: string
     disabled: boolean
