@@ -45,7 +45,7 @@ const projectitems = shallowRef([
                     <template #append>
                         <v-chip v-if="item.task" size="small" rounded="md">
                             <template #prepend>
-                                <SvgSprite name="custom-link1" class="mr-1" style="width: 12px; height: 12px" />
+                                <SharedSvgSprite name="custom-link1" class="mr-1" style="width: 12px; height: 12px" />
                             </template>
                             {{ item.task }}
                         </v-chip>
@@ -54,7 +54,7 @@ const projectitems = shallowRef([
             </v-list>
             <v-btn color="primary" variant="flat" rounded="md" block>
                 <template #prepend>
-                    <SvgSprite name="custom-plus" style="width: 18px; height: 18px" />
+                    <SharedSvgSprite name="custom-plus" style="width: 18px; height: 18px" />
                 </template>
                 Add Task
             </v-btn>

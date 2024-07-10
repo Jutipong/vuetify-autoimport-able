@@ -30,7 +30,7 @@ onMounted(async () => {
     >
         <!---If icon -->
         <template #prepend>
-            <SvgSprite :name="props.item.icon || ''" :level="props.level" />
+            <SharedSvgSprite :name="props.item.icon || ''" :level="props.level" />
         </template>
         <v-list-item-title>{{ item.title }}</v-list-item-title>
         <!---If Caption -->
@@ -55,7 +55,7 @@ onMounted(async () => {
     >
         <!---If icon -->
         <template #prepend>
-            <SvgSprite :name="props.item.icon || ''" :level="props.level" />
+            <SharedSvgSprite :name="props.item.icon || ''" :level="props.level" />
         </template>
         <v-list-item-title>{{ item.title }}</v-list-item-title>
         <!---If Caption -->

@@ -23,7 +23,7 @@ const customizer = useCustomizerStore()
                 customizer.inputBg ? 'inputWithbg' : '',
             ]"
         >
-            <!-- <VerticalSidebarVue /> -->
+            <VerticalSidebarVue />
             <VerticalHeaderVue />
 
             <v-main class="page-wrapper">
@@ -37,7 +37,7 @@ const customizer = useCustomizerStore()
                 </v-container>
                 <v-container fluid class="pt-0">
                     <div>
-                        <!-- <FooterPanel /> -->
+                        <FooterPanel />
                     </div>
                 </v-container>
             </v-main>

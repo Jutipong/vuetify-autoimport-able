@@ -1,8 +1,11 @@
 /* eslint-disable import/order */
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+
+import type { PluginOptions } from 'vue-toastification'
+import Toast from 'vue-toastification'
+
 import App from './App.vue'
-import vuetify from './plugins/vuetify'
+import vuetify from '@/plugins/vuetify'
 import router from '@core/router'
 
 import '@/scss/style.scss'
@@ -45,4 +48,10 @@ app.use(PerfectScrollbarPlugin)
 app.use(piniaConfig)
 app.use(VueTablerIcons)
 app.use(VueApexCharts)
+app.use(Toast, {
+    transition: 'Vue-Toastification__bounce',
+    timeout: 5000,
+    maxToasts: 9,
+    newestOnTop: true,
+} as PluginOptions)
 app.use(vuetify).mount('#app')

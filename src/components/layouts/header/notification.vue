@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// import SvgSprite from '@/components/shared/SvgSprite.vue'
+import SvgSprite from '@/components/shared/SvgSprite.vue'
 </script>
 
 <template>
@@ -10,7 +10,7 @@
         <template #activator="{ props }">
             <v-btn icon class="text-secondary ml-sm-2 ml-1" color="secondary" rounded="sm" v-bind="props">
                 <v-badge color="success" content="2" offset-x="-2" offset-y="-2">
-                    <!-- <SvgSprite name="custom-notification" /> -->
+                    <!-- <SharedSvgSprite name="custom-notification" /> -->
                 </v-badge>
             </v-btn>
         </template>
@@ -26,7 +26,7 @@
                     <v-list-item value="1" color="secondary" class="no-spacer py-5 mb-3 px-3" rounded="md">
                         <template #prepend>
                             <v-avatar size="40" variant="flat" color="primary" class="mr-3 py-2">
-                                <SvgSprite name="custom-gift-fill" />
+                                <SharedSvgSprite name="custom-gift-fill" />
                             </v-avatar>
                         </template>
                         <div class="d-inline-flex justify-space-between w-100">
@@ -43,7 +43,7 @@
                     <v-list-item value="2" color="secondary" class="no-spacer mb-3 px-3 py-5" rounded="md">
                         <template #prepend>
                             <v-avatar size="40" variant="outlined" color="primary" class="mr-3 py-2">
-                                <SvgSprite name="custom-message-fill" />
+                                <SharedSvgSprite name="custom-message-fill" />
                             </v-avatar>
                         </template>
                         <div class="d-inline-flex justify-space-between w-100">
@@ -60,7 +60,7 @@
                     <v-list-item value="3" color="secondary" class="no-spacer mb-3 px-3 py-5" rounded="md">
                         <template #prepend>
                             <v-avatar size="36" variant="tonal" color="primary" class="mr-3 py-2">
-                                <SvgSprite name="custom-setting-fill" />
+                                <SharedSvgSprite name="custom-setting-fill" />
                             </v-avatar>
                         </template>
                         <div class="d-inline-flex justify-space-between w-100">

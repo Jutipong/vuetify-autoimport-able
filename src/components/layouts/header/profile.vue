@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import SvgSprite from '@/components/shared/SvgSprite.vue'
 
-import { useAuthStore } from '@/stores/auth'
-
 const tab = ref(null)
-const authStore = useAuthStore()
 
 const profiledata1 = ref([
     {
@@ -68,21 +64,21 @@ const profiledata2 = ref([
                 </p>
             </div>
             <div class="ml-auto">
-                <v-btn variant="text" aria-label="logout" color="error" rounded="sm" icon size="large" @click="authStore.logout()">
-                    <SvgSprite name="custom-logout-1" />
+                <v-btn variant="text" aria-label="logout" color="error" rounded="sm" icon size="large">
+                    <SharedSvgSprite name="custom-logout-1" />
                 </v-btn>
             </div>
         </div>
         <v-tabs v-model="tab" color="primary" grow>
             <v-tab value="111">
                 <div class="v-icon--start">
-                    <SvgSprite name="custom-user-outline" style="width: 18px; height: 18px" />
+                    <SharedSvgSprite name="custom-user-outline" style="width: 18px; height: 18px" />
                 </div>
                 Profile
             </v-tab>
             <v-tab value="222">
                 <div class="v-icon--start">
-                    <SvgSprite name="custom-setting-outline-1" style="width: 18px; height: 18px" />
+                    <SharedSvgSprite name="custom-setting-outline-1" style="width: 18px; height: 18px" />
                 </div>
                 Setting
             </v-tab>
@@ -102,7 +98,7 @@ const profiledata2 = ref([
                         >
                             <template #prepend>
                                 <div class="mr-4">
-                                    <SvgSprite :name="item.icon || ''" style="width: 18px; height: 18px" />
+                                    <SharedSvgSprite :name="item.icon || ''" style="width: 18px; height: 18px" />
                                 </div>
                             </template>
 
@@ -110,10 +106,10 @@ const profiledata2 = ref([
                                 {{ item.title }}
                             </v-list-item-title>
                         </v-list-item>
-                        <v-list-item color="primary" base-color="secondary" rounded="md" @click="authStore.logout()">
+                        <v-list-item color="primary" base-color="secondary" rounded="md">
                             <template #prepend>
                                 <div class="mr-4">
-                                    <SvgSprite name="custom-logout-1" style="width: 18px; height: 18px" />
+                                    <SharedSvgSprite name="custom-logout-1" style="width: 18px; height: 18px" />
                                 </div>
                             </template>
 
@@ -135,7 +131,7 @@ const profiledata2 = ref([
                         >
                             <template #prepend>
                                 <div class="mr-4">
-                                    <SvgSprite :name="item.icon || ''" style="width: 18px; height: 18px" />
+                                    <SharedSvgSprite :name="item.icon || ''" style="width: 18px; height: 18px" />
                                 </div>
                             </template>
 

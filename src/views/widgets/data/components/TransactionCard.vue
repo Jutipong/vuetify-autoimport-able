@@ -191,7 +191,7 @@ const transactionData2 = shallowRef([
                 <v-menu width="150">
                     <template #activator="{ props }">
                         <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                            <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
+                            <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
                         </v-btn>
                     </template>
                     <v-list elevation="24" class="pa-3" rounded="md" aria-busy="true" aria-label="menu">
@@ -243,7 +243,7 @@ const transactionData2 = shallowRef([
                                         {{ item.price }}
                                     </h6>
                                     <p :class="`text-body-1 mb-0 text-${item.color}`">
-                                        <SvgSprite
+                                        <SharedSvgSprite
                                             :name="item.icon || ''"
                                             style="width: 14px; height: 14px; vertical-align: -2px"
                                             :style="item.icon == 'custom-bidirectional' ? '' : 'transform:rotate(45deg)'"
@@ -280,7 +280,7 @@ const transactionData2 = shallowRef([
                                         {{ item.price }}
                                     </h6>
                                     <p :class="`text-body-1 mb-0 text-${item.color}`">
-                                        <SvgSprite
+                                        <SharedSvgSprite
                                             :name="item.icon || ''"
                                             style="width: 14px; height: 14px; vertical-align: -2px"
                                             :style="item.icon == 'custom-bidirectional' ? '' : 'transform:rotate(45deg)'"
@@ -317,7 +317,7 @@ const transactionData2 = shallowRef([
                                         {{ item.price }}
                                     </h6>
                                     <p :class="`text-body-1 mb-0 text-${item.color}`">
-                                        <SvgSprite
+                                        <SharedSvgSprite
                                             :name="item.icon || ''"
                                             style="width: 14px; height: 14px; vertical-align: -2px"
                                             :style="item.icon == 'custom-bidirectional' ? '' : 'transform:rotate(45deg)'"

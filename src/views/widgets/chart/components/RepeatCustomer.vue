@@ -71,7 +71,7 @@ const areaChart = {
                 <v-menu width="150" location="start">
                     <template #activator="{ props }">
                         <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                            <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px" />
+                            <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px" />
                         </v-btn>
                     </template>
                     <v-list elevation="24" class="pa-3" rounded="md" aria-label="menu" aria-busy="true">

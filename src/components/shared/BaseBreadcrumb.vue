@@ -24,7 +24,7 @@ const props = defineProps({
                         <v-breadcrumbs :items="props.breadcrumbs" class="text-h6 pa-1 mb-0">
                             <template #divider>
                                 <div class="d-flex align-center">
-                                    <SvgSprite name="custom-chevron-outline" style="width: 12px; height: 12px" />
+                                    <SharedSvgSprite name="custom-chevron-outline" style="width: 12px; height: 12px" />
                                 </div>
                             </template>
                             <template #prepend>
@@ -32,7 +32,7 @@ const props = defineProps({
                                     Home
                                 </router-link>
                                 <div class="d-flex align-center px-2">
-                                    <SvgSprite name="custom-chevron-outline" style="width: 12px; height: 12px" />
+                                    <SharedSvgSprite name="custom-chevron-outline" style="width: 12px; height: 12px" />
                                 </div>
                             </template>
                         </v-breadcrumbs>

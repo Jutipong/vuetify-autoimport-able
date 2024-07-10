@@ -205,7 +205,7 @@ const barChart4 = {
                         <v-list-item class="pa-0">
                             <template #prepend>
                                 <v-avatar variant="tonal" color="primary" rounded="md">
-                                    <SvgSprite name="custom-wallet-outline" style="width: 20px; height: 20px" />
+                                    <SharedSvgSprite name="custom-wallet-outline" style="width: 20px; height: 20px" />
                                 </v-avatar>
                             </template>
                             <h6 class="text-subtitle-1 mb-0">
@@ -215,7 +215,7 @@ const barChart4 = {
                                 <v-menu width="150" location="start">
                                     <template #activator="{ props }">
                                         <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                                            <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
+                                            <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
                                         </v-btn>
                                     </template>
                                     <v-list elevation="24" aria-label="menu" aria-busy="true" class="pa-3" rounded="md">
@@ -246,7 +246,7 @@ const barChart4 = {
                                     $3200
                                 </h5>
                                 <p class="text-body-1 text-primary mb-0">
-                                    <SvgSprite name="custom-rise-outline" style="width: 16px; height: 16px; transform: rotate(45deg)" />
+                                    <SharedSvgSprite name="custom-rise-outline" style="width: 16px; height: 16px; transform: rotate(45deg)" />
                                     30.6%
                                 </p>
                             </v-col>
@@ -264,7 +264,7 @@ const barChart4 = {
                         <v-list-item class="pa-0">
                             <template #prepend>
                                 <v-avatar variant="tonal" color="warning" rounded="md">
-                                    <SvgSprite name="custom-page-outline" style="width: 20px; height: 20px" />
+                                    <SharedSvgSprite name="custom-page-outline" style="width: 20px; height: 20px" />
                                 </v-avatar>
                             </template>
                             <h6 class="text-subtitle-1 mb-0">
@@ -274,7 +274,7 @@ const barChart4 = {
                                 <v-menu width="150" location="start">
                                     <template #activator="{ props }">
                                         <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                                            <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
+                                            <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
                                         </v-btn>
                                     </template>
                                     <v-list elevation="24" aria-label="menu" aria-busy="true" class="pa-3" rounded="md">
@@ -305,7 +305,7 @@ const barChart4 = {
                                     290+
                                 </h5>
                                 <p class="text-body-1 text-warning mb-0">
-                                    <SvgSprite name="custom-fall-outline" style="width: 16px; height: 16px; transform: rotate(45deg)" />
+                                    <SharedSvgSprite name="custom-fall-outline" style="width: 16px; height: 16px; transform: rotate(45deg)" />
                                     30.6%
                                 </p>
                             </v-col>
@@ -323,7 +323,7 @@ const barChart4 = {
                         <v-list-item class="pa-0">
                             <template #prepend>
                                 <v-avatar variant="tonal" color="success" rounded="md">
-                                    <SvgSprite name="custom-calendar-outline" style="width: 20px; height: 20px" />
+                                    <SharedSvgSprite name="custom-calendar-outline" style="width: 20px; height: 20px" />
                                 </v-avatar>
                             </template>
                             <h6 class="text-subtitle-1 mb-0">
@@ -333,7 +333,7 @@ const barChart4 = {
                                 <v-menu width="150" location="start">
                                     <template #activator="{ props }">
                                         <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                                            <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
+                                            <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
                                         </v-btn>
                                     </template>
                                     <v-list elevation="24" aria-label="menu" aria-busy="true" class="pa-3" rounded="md">
@@ -364,7 +364,7 @@ const barChart4 = {
                                     1468
                                 </h5>
                                 <p class="text-body-1 text-success mb-0">
-                                    <SvgSprite name="custom-rise-outline" style="width: 16px; height: 16px; transform: rotate(45deg)" />
+                                    <SharedSvgSprite name="custom-rise-outline" style="width: 16px; height: 16px; transform: rotate(45deg)" />
                                     30.6%
                                 </p>
                             </v-col>
@@ -382,7 +382,7 @@ const barChart4 = {
                         <v-list-item class="pa-0">
                             <template #prepend>
                                 <v-avatar variant="tonal" color="error" rounded="md">
-                                    <SvgSprite name="custom-cloud-outline-1" style="width: 20px; height: 20px" />
+                                    <SharedSvgSprite name="custom-cloud-outline-1" style="width: 20px; height: 20px" />
                                 </v-avatar>
                             </template>
                             <h6 class="text-subtitle-1 mb-0">
@@ -392,7 +392,7 @@ const barChart4 = {
                                 <v-menu width="150" location="start">
                                     <template #activator="{ props }">
                                         <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                                            <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
+                                            <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
                                         </v-btn>
                                     </template>
                                     <v-list elevation="24" aria-label="menu" aria-busy="true" class="pa-3" rounded="md">
@@ -423,7 +423,7 @@ const barChart4 = {
                                     $300
                                 </h5>
                                 <p class="text-body-1 text-error mb-0">
-                                    <SvgSprite name="custom-fall-outline" style="width: 16px; height: 16px; transform: rotate(130deg)" />
+                                    <SharedSvgSprite name="custom-fall-outline" style="width: 16px; height: 16px; transform: rotate(130deg)" />
                                     30.6%
                                 </p>
                             </v-col>

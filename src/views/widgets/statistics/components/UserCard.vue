@@ -12,7 +12,7 @@ const menulist = ref(['Today', 'Weekly', 'Monthly'])
                 <v-list-item class="px-0">
                     <template #prepend>
                         <v-avatar variant="tonal" color="primary" rounded="md">
-                            <SvgSprite name="custom-user-fill" style="width: 20px; height: 20px" />
+                            <SharedSvgSprite name="custom-user-fill" style="width: 20px; height: 20px" />
                         </v-avatar>
                     </template>
                     <h6 class="text-subtitle-1 mb-0">
@@ -23,7 +23,7 @@ const menulist = ref(['Today', 'Weekly', 'Monthly'])
                         <v-menu width="150">
                             <template #activator="{ props }">
                                 <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                                    <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
+                                    <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
                                 </v-btn>
                             </template>
                             <v-list elevation="24" class="pa-3" rounded="md" aria-label="menu" aria-busy="true">
@@ -63,7 +63,7 @@ const menulist = ref(['Today', 'Weekly', 'Monthly'])
                             </v-avatar>
                         </div>
                         <v-btn icon color="primary" aria-label="add" variant="flat" size="small">
-                            <SvgSprite name="custom-plus" style="width: 20px; height: 20px" />
+                            <SharedSvgSprite name="custom-plus" style="width: 20px; height: 20px" />
                         </v-btn>
                     </div>
                 </v-list-item>

@@ -1,6 +1,6 @@
 <script setup>
-import NavItem from '../NavItem/NavItem.vue'
-import SvgSprite from '@/components/shared/SvgSprite.vue'
+// import NavItem from '../NavItem/NavItem.vue'
+// import SvgSprite from '@/components/shared/SvgSprite.vue'
 
 const props = defineProps({ item: Object, level: Number })
 </script>
@@ -17,7 +17,7 @@ const props = defineProps({ item: Object, level: Number })
             <v-list-item v-bind="props" :value="item.title" rounded color="primary">
                 <!---Icon  -->
                 <template #prepend>
-                    <SvgSprite :name="item.icon || ''" :level="level" />
+                    <SharedSvgSprite :name="item.icon || ''" :level="level" />
                 </template>
                 <!---Title  -->
                 <v-list-item-title class="mr-auto">
@@ -34,7 +34,7 @@ const props = defineProps({ item: Object, level: Number })
         <!-- ---------------------------------------------- -->
         <template v-for="(subitem, i) in item.children" :key="i">
             <NavCollapse v-if="subitem.children" :item="subitem" :level="props.level + 1" />
-            <NavItem v-else :item="subitem" :level="props.level + 1" />
+            <LayoutsSidebarNavItem v-else :item="subitem" :level="props.level + 1" />
         </template>
     </v-list-group>
 

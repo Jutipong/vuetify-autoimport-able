@@ -43,11 +43,11 @@ export default defineConfig({
             dts: 'src/typed-router.d.ts',
         }),
         vue({
-            template: {
-                compilerOptions: {
-                    isCustomElement: tag => ['v-list-recognize-title'].includes(tag),
-                },
-            },
+            // template: {
+            //     compilerOptions: {
+            //         isCustomElement: tag => ['v-list-recognize-title'].includes(tag),
+            //     },
+            // },
         }),
         vuetify({
             autoImport: true,
@@ -75,7 +75,8 @@ export default defineConfig({
         chunkSizeWarningLimit: 1024 * 1024, // Set the limit to 1 MB
     },
     optimizeDeps: {
-        exclude: ['vuetify'],
+        include: ['vue', 'vue-router', 'pinia', 'axios', 'lodash', 'axios-cache-interceptor'],
         entries: ['./src/**/*.vue'],
+        exclude: ['vuetify'],
     },
 })

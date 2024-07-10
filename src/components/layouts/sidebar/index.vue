@@ -4,10 +4,10 @@ import { useCustomizerStore } from '../../../stores/customizer'
 import Logo from '../logo/index.vue'
 import sidebarItems from './sidebarItem'
 
-import NavGroup from './nav-group.vue'
-import NavItem from './nav-item.vue'
-import NavCollapse from './nav-collapse.vue'
-import ExtraBox from './extrabox/ExtraBox.vue'
+// import NavGroup from './nav-group.vue'
+// import NavItem from './nav-item.vue'
+// import NavCollapse from './nav-collapse.vue'
+// import ExtraBox from './extrabox/ExtraBox.vue'
 
 const customizer = useCustomizerStore()
 const sidebarMenu = shallowRef(sidebarItems)
@@ -39,19 +39,20 @@ const sidebarMenu = shallowRef(sidebarItems)
                 <!---Menu Loop -->
                 <template v-for="(item, i) in sidebarMenu" :key="i">
                     <!---Item Sub Header -->
-                    <NavGroup v-if="item.header" :key="item.title" :item="item" />
+                    <LayoutsSidebarNavGroup v-if="item.header" :key="item.title" :item="item" />
+
                     <!---Item Divider -->
                     <v-divider v-else-if="item.divider" class="my-3" />
                     <!---If Has Child -->
-                    <NavCollapse v-else-if="item.children" class="leftPadding" :item="item" :level="0" />
+                    <LayoutsSidebarNavCollapse v-else-if="item.children" class="leftPadding" :item="item" :level="0" />
+
                     <!---Single Item -->
-                    <NavItem v-else :item="item" />
+                    <LayoutsSidebarNavItem v-else :item="item" />
+
                     <!---End Single Item -->
                 </template>
             </v-list>
-            <div class="pa-4">
-                <ExtraBox />
-            </div>
+            <div class="pa-4" />
         </perfect-scrollbar>
     </v-navigation-drawer>
 </template>

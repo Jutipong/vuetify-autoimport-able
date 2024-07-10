@@ -116,7 +116,7 @@ const pieChart = {
                 <v-menu width="150" location="start">
                     <template #activator="{ props }">
                         <v-btn icon color="secondary" aria-label="menu" variant="text" rounded="md" size="small" v-bind="props">
-                            <SvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
+                            <SharedSvgSprite name="custom-more-outline" style="width: 20px; height: 20px; transform: rotate(90deg)" />
                         </v-btn>
                     </template>
                     <v-list elevation="24" class="pa-3" rounded="md" aria-label="menu" aria-busy="true">
@@ -143,7 +143,7 @@ const pieChart = {
                         <h6 class="text-subtitle-1 mb-0">
                             {{ item.subcontent }}
                             <span class="text-lightText text-caption" style="font-weight: 600">
-                                <SvgSprite name="custom-rise-outline" style="width: 14px; height: 14px" />
+                                <SharedSvgSprite name="custom-rise-outline" style="width: 14px; height: 14px" />
                                 {{ item.price }}
                             </span>
                         </h6>

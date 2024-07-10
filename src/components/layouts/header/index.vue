@@ -18,7 +18,7 @@ watch(priority, (newPriority) => {
             variant="tonal"
             @click.stop="customizer.SET_MINI_SIDEBAR(!customizer.mini_sidebar)"
         >
-            <SvgSprite name="custom-menu-outline" style="width: 24px; height: 24px" />
+            <SharedSvgSprite name="custom-menu-outline" style="width: 24px; height: 24px" />
         </v-btn>
         <v-btn
             class="hidden-lg-and-up text-secondary"
@@ -29,7 +29,7 @@ watch(priority, (newPriority) => {
             size="small"
             @click.stop="customizer.SET_SIDEBAR_DRAWER"
         >
-            <SvgSprite name="custom-menu-outline" style="width: 24px; height: 24px" />
+            <SharedSvgSprite name="custom-menu-outline" style="width: 24px; height: 24px" />
         </v-btn>
 
         <!-- search mobile -->
@@ -37,7 +37,7 @@ watch(priority, (newPriority) => {
             <template #activator="{ props }">
                 <v-btn class="hidden-lg-and-up ml-1" color="secondary" icon rounded="sm" variant="text" size="small" v-bind="props">
                     <div class="text-lightText d-flex align-center">
-                        <SvgSprite name="custom-search" style="width: 16px; height: 16px" />
+                        <SharedSvgSprite name="custom-search" style="width: 16px; height: 16px" />
                     </div>
                 </v-btn>
             </template>
@@ -45,7 +45,7 @@ watch(priority, (newPriority) => {
                 <v-text-field persistent-placeholder placeholder="Search here.." rounded="md" color="primary" variant="solo" hide-details>
                     <template #prepend-inner>
                         <div class="text-lightText d-flex align-center">
-                            <SvgSprite name="custom-search" style="width: 16px; height: 16px" />
+                            <SharedSvgSprite name="custom-search" style="width: 16px; height: 16px" />
                         </div>
                     </template>
                 </v-text-field>
@@ -55,9 +55,9 @@ watch(priority, (newPriority) => {
         <!-- ---------------------------------------------- -->
         <!-- Search part -->
         <!-- ---------------------------------------------- -->
-        <v-sheet color="transparent" class="d-none d-lg-block" width="224">
+        <!-- <v-sheet color="transparent" class="d-none d-lg-block" width="224">
             <Searchbar />
-        </v-sheet>
+        </v-sheet> -->
 
         <!---/Search part -->
 
@@ -69,7 +69,8 @@ watch(priority, (newPriority) => {
         <!-- ---------------------------------------------- -->
         <!-- Notification -->
         <!-- ---------------------------------------------- -->
-        <NotificationDD />
+        <!-- <NotificationDD /> -->
+        <LayoutsHeaderNotification />
 
         <!-- ---------------------------------------------- -->
         <!-- User Profile -->
@@ -83,7 +84,8 @@ watch(priority, (newPriority) => {
                 </v-btn>
             </template>
             <v-sheet rounded="md" width="290">
-                <ProfileDD />
+                <!-- <ProfileDD /> -->
+                <LayoutsHeaderProfile />
             </v-sheet>
         </v-menu>
     </v-app-bar>

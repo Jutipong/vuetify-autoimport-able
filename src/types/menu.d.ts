@@ -1,14 +1,15 @@
 interface Menu {
     header?: string
     title?: string
-    icon?: object
+    icon?: string
     to?: string
     divider?: boolean
-    children?: Menu[]
+    getURL?: boolean
     chip?: string
     chipColor?: string
     chipVariant?: string
     chipIcon?: string
+    children?: menu[]
     disabled?: boolean
     type?: string
     subCaption?: string
