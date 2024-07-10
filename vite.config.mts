@@ -1,7 +1,7 @@
-import { fileURLToPath, URL } from 'url';
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import vuetify from 'vite-plugin-vuetify';
+import { URL, fileURLToPath } from 'node:url'
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vuetify from 'vite-plugin-vuetify'
 import AutoImport from 'unplugin-auto-import/vite'
 // import Components from 'unplugin-vue-components/vite'
 // import Layouts from 'vite-plugin-vue-layouts'
@@ -12,8 +12,8 @@ import { typescriptConfig, vueConfig } from './src/constants/vite-config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-     AutoImport({
+    plugins: [
+        AutoImport({
             imports: [
                 // VueRouterAutoImports,
                 {
@@ -28,19 +28,19 @@ export default defineConfig({
             dirs: ['./src/**'],
             dts: './src/auto-imports.d.ts',
         }),
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => ['v-list-recognize-title'].includes(tag)
-        }
-      }
-    }),
-    vuetify({
-      autoImport: true
-    })
-  ],
-  base: '/',
-  resolve: {
+        vue({
+            template: {
+                compilerOptions: {
+                    isCustomElement: tag => ['v-list-recognize-title'].includes(tag),
+                },
+            },
+        }),
+        vuetify({
+            autoImport: true,
+        }),
+    ],
+    base: '/',
+    resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url)),
             '@core': fileURLToPath(new URL('./src/@core', import.meta.url)),
@@ -52,16 +52,16 @@ export default defineConfig({
         },
         extensions: ['.js', '.json', '.jsx', '.mjs', '.ts', '.tsx', '.vue'],
     },
-  css: {
-    preprocessorOptions: {
-      scss: {}
-    }
-  },
-  build: {
-    chunkSizeWarningLimit: 1024 * 1024 // Set the limit to 1 MB
-  },
-  optimizeDeps: {
-    exclude: ['vuetify'],
-    entries: ['./src/**/*.vue']
-  }
-});
+    css: {
+        preprocessorOptions: {
+            scss: {},
+        },
+    },
+    build: {
+        chunkSizeWarningLimit: 1024 * 1024, // Set the limit to 1 MB
+    },
+    optimizeDeps: {
+        exclude: ['vuetify'],
+        entries: ['./src/**/*.vue'],
+    },
+})

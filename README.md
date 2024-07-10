@@ -112,7 +112,6 @@ npm run dev
 Able-pro is developed by Team [Phoenixcoded](https://themeforest.net/user/phoenixcoded).
 Able-pro is managed by Team [CodedThemes](https://codedthemes.com).
 
-
 ## Issues
 
 To report a bug, please submit an [issue](https://github.com/codedthemes/able-pro-free-admin-dashboard-template/issues) on Github. We will respond as soon as possible to resolve the issue.

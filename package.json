@@ -7,10 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "build-prod": "vue-tsc --noEmit && vite build --base=/vue/free/",
-    "preview": "vite preview --port 5050",
-    "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "x": "rm -f ./src/auto-imports.d.ts && rm -f ./src/components.d.ts && rm -f ./src/typed-router.d.ts && vite"
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.19",

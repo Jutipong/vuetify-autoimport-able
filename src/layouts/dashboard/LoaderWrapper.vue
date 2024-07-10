@@ -1,18 +1,17 @@
 <script setup lang="ts">
-const uiStore = useUIStore();
-const { isLoading } = storeToRefs(uiStore);
+const uiStore = useUIStore()
+const { isLoading } = storeToRefs(uiStore)
 </script>
 
 <template>
-  <div
-    :class="{
-      'page-loader': true,
-      loading: isLoading,
-      hidden: !isLoading
-    }"
-  >
-    <div class="bar" />
-  </div>
+    <div
+        class="page-loader" :class="{
+            loading: isLoading,
+            hidden: !isLoading,
+        }"
+    >
+        <div class="bar" />
+    </div>
 </template>
 
 <style scoped>
