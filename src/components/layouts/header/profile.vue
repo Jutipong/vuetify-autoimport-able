@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import SvgSprite from '@/components/shared/SvgSprite.vue'
-
 const tab = ref(null)
 
 const profiledata1 = ref([

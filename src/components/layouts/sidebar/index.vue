@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import { shallowRef } from 'vue'
-import { useCustomizerStore } from '../../../stores/customizer'
-import Logo from '../logo/index.vue'
 import sidebarItems from './sidebarItem'
-
-// import NavGroup from './nav-group.vue'
-// import NavItem from './nav-item.vue'
-// import NavCollapse from './nav-collapse.vue'
-// import ExtraBox from './extrabox/ExtraBox.vue'
 
 const customizer = useCustomizerStore()
 const sidebarMenu = shallowRef(sidebarItems)
@@ -29,7 +21,7 @@ const sidebarMenu = shallowRef(sidebarItems)
         <!---Logo part -->
 
         <div class="pa-5">
-            <Logo />
+            <LayoutsLogo />
         </div>
         <!-- ---------------------------------------------- -->
         <!---Navigation -->

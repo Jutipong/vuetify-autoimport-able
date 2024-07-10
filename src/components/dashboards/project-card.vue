@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { shallowRef } from 'vue'
-// import CardHeader from '@/components/shared/CardHeader.vue'
-
 const projectitems = shallowRef([
     {
         color: 'warning',
@@ -24,7 +21,7 @@ const projectitems = shallowRef([
 </script>
 
 <template>
-    <CardHeader title="Project - Able Pro" class="overflow-hidden">
+    <SharedCardHeader title="Project - Able Pro" class="overflow-hidden">
         <div class="pa-6">
             <div class="d-flex justify-space-between mb-2">
                 <p class="text-body-1 mb-0">
@@ -58,5 +55,5 @@ const projectitems = shallowRef([
                 Add Task
             </v-btn>
         </div>
-    </CardHeader>
+    </SharedCardHeader>
 </template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-// assets
-import Banner from '@/assets/images/analytics/welcome-banner.png'
+import Banner from '@images/analytics/welcome-banner.png'
 </script>
 
 <template>
