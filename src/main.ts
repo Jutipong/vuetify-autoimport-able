@@ -1,15 +1,16 @@
+/* eslint-disable import/order */
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
-import { router } from './router'
 import vuetify from './plugins/vuetify'
+import router from '@core/router'
 
 import '@/scss/style.scss'
 import { PerfectScrollbarPlugin } from 'vue3-perfect-scrollbar'
 import VueApexCharts from 'vue3-apexcharts'
 import VueTablerIcons from 'vue-tabler-icons'
 
-import SvgSprite from '@/components/shared/SvgSprite.vue'
+// import SvgSprite from '@/components/shared/SvgSprite.vue'
 
 // google-fonts
 import '@fontsource/roboto/400.css'
@@ -33,14 +34,15 @@ import '@fontsource/public-sans/600.css'
 import '@fontsource/public-sans/700.css'
 
 import { fakeBackend } from '@/utils/helpers/fake-backend'
+import { piniaConfig } from '@/utils/pinia-config'
 
 const app = createApp(App)
 fakeBackend()
 
 app.use(router)
 app.use(PerfectScrollbarPlugin)
-app.component('SvgSprite', SvgSprite)
-app.use(createPinia())
+// app.component('SvgSprite', SvgSprite)
+app.use(piniaConfig)
 app.use(VueTablerIcons)
 app.use(VueApexCharts)
 app.use(vuetify).mount('#app')

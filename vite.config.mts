@@ -4,9 +4,9 @@ import vue from '@vitejs/plugin-vue'
 import vuetify from 'vite-plugin-vuetify'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
-// import Layouts from 'vite-plugin-vue-layouts'
-// import VueRouter from 'unplugin-vue-router/vite'
-// import { VueRouterAutoImports } from 'unplugin-vue-router'
+import Layouts from 'vite-plugin-vue-layouts'
+import VueRouter from 'unplugin-vue-router/vite'
+import { VueRouterAutoImports } from 'unplugin-vue-router'
 // import UnoCSS from 'unocss/vite'
 import { typescriptConfig, vueConfig } from './src/constants/vite-config'
 
@@ -15,7 +15,7 @@ export default defineConfig({
     plugins: [
         AutoImport({
             imports: [
-                // VueRouterAutoImports,
+                VueRouterAutoImports,
                 {
                     typescript: typescriptConfig,
                     vue: vueConfig,
@@ -33,6 +33,14 @@ export default defineConfig({
             dts: 'src/components.d.ts',
             deep: true,
             directoryAsNamespace: true,
+        }),
+        Layouts({
+            layoutsDirs: 'src/@core/layouts',
+            defaultLayout: 'default',
+        }),
+        VueRouter({
+            routesFolder: 'src/pages',
+            dts: 'src/typed-router.d.ts',
         }),
         vue({
             template: {

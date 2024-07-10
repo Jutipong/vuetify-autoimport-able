@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 
-const props = defineProps({
-    name: String,
-})
+const props = defineProps({ name: String })
 
 const spritePath = ref<string | null>(null)
 
 onMounted(async () => {
     try {
-    // Load the SVG sprite dynamically with an absolute path
         spritePath.value = `${await import.meta.env.BASE_URL}assets/svg/sprite.svg`
     }
     catch (error) {
