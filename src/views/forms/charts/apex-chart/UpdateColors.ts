@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import * as themeColors from '@/theme/LightTheme'
+import * as themeColors from '@/@core/plugins/LightTheme'
 
 const getPrimary = computed(() => {
     return themeColors.DefaultTheme.colors.primary
