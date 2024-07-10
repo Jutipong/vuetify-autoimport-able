@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import SvgSprite from '@/components/shared/SvgSprite.vue'
 </script>
 
 <template>
@@ -10,7 +9,7 @@ import SvgSprite from '@/components/shared/SvgSprite.vue'
         <template #activator="{ props }">
             <v-btn icon class="text-secondary ml-sm-2 ml-1" color="secondary" rounded="sm" v-bind="props">
                 <v-badge color="success" content="2" offset-x="-2" offset-y="-2">
-                    <!-- <SharedSvgSprite name="custom-notification" /> -->
+                    <SharedSvgSprite name="custom-notification" />
                 </v-badge>
             </v-btn>
         </template>

@@ -3,46 +3,29 @@ const sidebarItem: Menu[] = [
     {
         title: 'Dashboard',
         icon: 'custom-home-trend',
-        to: '/dashboard/default',
+        to: '/dashboard',
     },
     { header: 'Utilities' },
     {
         title: 'Typography',
         icon: 'custom-typography',
-        to: '/utils/typography',
+        to: '/typography',
     },
     {
         title: 'Colors',
         icon: 'custom-colorpick',
-        to: '/utils/colors',
+        to: '/colors',
     },
     {
         title: 'Shadows',
         icon: 'custom-shadow',
-        to: '/utils/shadows',
-    },
-    { header: 'Pages' },
-    {
-        title: 'Login',
-        icon: 'custom-shield',
-        to: '/auth/login1',
-    },
-    {
-        title: 'Register',
-        icon: 'custom-register',
-        to: '/auth/register1',
+        to: '/shadows',
     },
     { header: 'Others' },
     {
         title: 'Sample Page',
         icon: 'custom-sample',
-        to: '/starter',
-    },
-    {
-        title: 'Documentation',
-        icon: 'custom-support',
-        to: 'https://phoenixcoded.gitbook.io/able-pro/v/vue/',
-        type: 'external',
+        to: '/sample-page',
     },
 ]
 

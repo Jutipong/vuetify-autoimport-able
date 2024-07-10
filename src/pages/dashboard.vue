@@ -1,74 +1,78 @@
 <script setup lang="ts">
-// import WidgetFive from './components/WidgetFive.vue'
-// import UniqueVisitor from './components/UniqueVisitor.vue'
-// import IncomeOverview from './components/IncomeOverview.vue'
-// import RecentOrder from './components/RecentOrder.vue'
-// import AnalyticsReport from './components/AnalyticsReport.vue'
-// import HelpSupport from './components/HelpSupport.vue'
-// import TransactionHistory from './components/TransactionHistory.vue'
-// import SalesReport from './components/SalesReport.vue'
+import ChartCards from '@/views/widgets/chart/components/ChartCards.vue'
+import RepeatCustomer from '@/views/widgets/chart/components/RepeatCustomer.vue'
+import ProjectOverview from '@/views/widgets/chart/components/ProjectOverview.vue'
+import UserCard from '@/views/widgets/statistics/components/UserCard.vue'
+import TransactionCard from '@/views/widgets/data/components/TransactionCard.vue'
+import TotalIncome from '@/views/widgets/chart/components/TotalIncome.vue'
 </script>
 
 <template>
     <!-- -------------------------------------------------------------------- -->
-    <!-- Total widgets -->
+    <!-- welcome banner -->
     <!-- -------------------------------------------------------------------- -->
-    <DashboardWidgetFive />
-
-    <v-row class="mb-0">
-        <!-- -------------------------------------------------------------------- -->
-        <!-- Unique visitor -->
-        <!-- -------------------------------------------------------------------- -->
-        <v-col cols="12" md="8">
-            <DashboardUniqueVisitor />
-        </v-col>
-
-        <!-- -------------------------------------------------------------------- -->
-        <!-- Income overview -->
-        <!-- -------------------------------------------------------------------- -->
-        <v-col cols="12" md="4">
-            <DashboardIncomeOverview />
+    <v-row class="my-0">
+        <v-col cols="12">
+            <DashboardsWelcomeBanner />
         </v-col>
     </v-row>
+
+    <!-- -------------------------------------------------------------------- -->
+    <!-- Chart widgets -->
+    <!-- -------------------------------------------------------------------- -->
+    <ChartCards />
+
     <v-row class="mb-0">
-        <!-- -------------------------------------------------------------------- -->
-        <!-- Recent order -->
-        <!-- -------------------------------------------------------------------- -->
-        <v-col cols="12" md="8">
-            <DashboardRecentOrder />
-        </v-col>
-
-        <!-- -------------------------------------------------------------------- -->
-        <!-- Analytics Report -->
-        <!-- -------------------------------------------------------------------- -->
-        <v-col cols="12" md="4">
-            <DashboardAnalyticsReport />
-        </v-col>
-    </v-row>
-    <v-row>
-        <!-- -------------------------------------------------------------------- -->
-        <!-- Sales Report -->
-        <!-- -------------------------------------------------------------------- -->
-        <v-col cols="12" md="7">
-            <DashboardSalesReport />
-        </v-col>
-
-        <v-col cols="12" md="5">
+        <v-col cols="12" xl="9" md="8">
             <v-row>
                 <!-- -------------------------------------------------------------------- -->
-                <!-- Transaction History -->
+                <!-- Repeat customer -->
                 <!-- -------------------------------------------------------------------- -->
                 <v-col cols="12">
-                    <DashboardTransactionHistory />
+                    <RepeatCustomer />
                 </v-col>
 
                 <!-- -------------------------------------------------------------------- -->
-                <!-- Help support -->
+                <!-- Project overview -->
                 <!-- -------------------------------------------------------------------- -->
                 <v-col cols="12">
-                    <DashboardHelpSupport />
+                    <ProjectOverview />
                 </v-col>
             </v-row>
+        </v-col>
+
+        <v-col cols="12" xl="3" md="4">
+            <v-row>
+                <!-- -------------------------------------------------------------------- -->
+                <!-- Project -->
+                <!-- -------------------------------------------------------------------- -->
+                <v-col cols="12">
+                    <DashboardsProjectCard />
+                </v-col>
+
+                <!-- -------------------------------------------------------------------- -->
+                <!-- User card -->
+                <!-- -------------------------------------------------------------------- -->
+                <v-col cols="12">
+                    <UserCard />
+                </v-col>
+            </v-row>
+        </v-col>
+    </v-row>
+
+    <v-row>
+        <!-- -------------------------------------------------------------------- -->
+        <!-- Transactions -->
+        <!-- -------------------------------------------------------------------- -->
+        <v-col cols="12" md="6">
+            <TransactionCard />
+        </v-col>
+
+        <!-- -------------------------------------------------------------------- -->
+        <!-- Total income -->
+        <!-- -------------------------------------------------------------------- -->
+        <v-col cols="12" md="6">
+            <TotalIncome />
         </v-col>
     </v-row>
 </template>
