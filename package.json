@@ -33,7 +33,6 @@
     "vue3-apexcharts": "^1.5.3",
     "vue3-perfect-scrollbar": "2.0.0",
     "vuetify": "^3.6.12",
-    "webpack-plugin-vuetify": "3.0.3",
     "yup": "1.4.0"
   },
   "devDependencies": {
@@ -47,7 +46,6 @@
     "unplugin-auto-import": "^0.17.6",
     "unplugin-vue-components": "^0.27.2",
     "vite": "^5.3.3",
-    "vue-cli-plugin-vuetify": "2.5.8",
     "vue-tsc": "^2.0.26"
   }
 }
