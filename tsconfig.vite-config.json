@@ -1,9 +1,12 @@
 {
-  "extends": "@tsconfig/node20/tsconfig.json",
-  "include": ["vite.config.*"],
   "compilerOptions": {
     "composite": true,
-    "allowJs": true,
-    "types": ["node"]
-  }
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "/src/constants/vite.config.ts",
+    "src/typed-router.d.ts"
+  ]
 }

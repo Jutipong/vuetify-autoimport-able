@@ -2,10 +2,32 @@ import { fileURLToPath, URL } from 'url';
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import vuetify from 'vite-plugin-vuetify';
+import AutoImport from 'unplugin-auto-import/vite'
+// import Components from 'unplugin-vue-components/vite'
+// import Layouts from 'vite-plugin-vue-layouts'
+// import VueRouter from 'unplugin-vue-router/vite'
+// import { VueRouterAutoImports } from 'unplugin-vue-router'
+// import UnoCSS from 'unocss/vite'
+import { typescriptConfig, vueConfig } from './src/constants/vite-config'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
+     AutoImport({
+            imports: [
+                // VueRouterAutoImports,
+                {
+                    typescript: typescriptConfig,
+                    vue: vueConfig,
+                    pinia: ['defineStore', 'acceptHMRUpdate', 'storeToRefs'],
+                    lodash: [['default', '_']],
+                    vuetify: ['useTheme', 'useDisplay'],
+                    zod: ['z'],
+                },
+            ],
+            dirs: ['./src/**'],
+            dts: './src/auto-imports.d.ts',
+        }),
     vue({
       template: {
         compilerOptions: {

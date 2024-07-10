@@ -1,42 +1,45 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": [
-    "vite-env.d.ts",
-    "src/**/*",
-    "src/**/*.vue",
-    "src/types/.d.ts"
-  ],
-  "compilerOptions": {
-    "ignoreDeprecations": "5.0",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*",
-      ],
-      "@assets/*": [
-        "src/assets/*"
-      ],
-      "@images/*": [
-        "src/assets/images/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@types/*": [
-        "src/types/*"
-      ],
-      "@core/*": [
-        "src/@core/*"
-      ],
-      "@utils/*": [
-        "src/utils/*"
-      ],
+    "compilerOptions": {
+        "ignoreDeprecations": "5.0",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*",
+            ],
+            "@assets/*": [
+                "src/assets/*"
+            ],
+            "@images/*": [
+                "src/assets/images/*"
+            ],
+            "@components/*": [
+                "src/components/*"
+            ],
+            "@types/*": [
+                "src/types/*"
+            ],
+            "@core/*": [
+                "src/@core/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ],
+        },
+        "allowJs": true
     },
-    "allowJs": true
-  },
-  "references": [
-    {
-      "path": "./tsconfig.vite-config.json"
-    }
-  ]
+    "references": [
+        {
+            "path": "./tsconfig.vite-config.json"
+        }
+    ],
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+    ],
+    "exclude": [
+        "node_modules"
+    ],
+    "extends": "@vue/tsconfig/tsconfig.dom.json",
 }
