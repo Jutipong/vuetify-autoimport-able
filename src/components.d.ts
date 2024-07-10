@@ -7,7 +7,6 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    DashboardsChartCards: typeof import('./components/dashboards/chart-cards.vue')['default']
     DashboardsProjectCard: typeof import('./components/dashboards/project-card.vue')['default']
     DashboardsWelcomeBanner: typeof import('./components/dashboards/welcome-banner.vue')['default']
     LayoutsFooter: typeof import('./components/layouts/footer/index.vue')['default']
