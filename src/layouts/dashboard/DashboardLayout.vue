@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
 import LoaderWrapper from './LoaderWrapper.vue';
 import VerticalSidebarVue from './vertical-sidebar/VerticalSidebar.vue';
 import VerticalHeaderVue from './vertical-header/VerticalHeader.vue';
 import FooterPanel from './footer/FooterPanel.vue';
-import { useCustomizerStore } from '../../stores/customizer';
+
 const customizer = useCustomizerStore();
 </script>
 
