@@ -8,12 +8,11 @@ import App from './App.vue'
 import vuetify from '@/@core/plugins/vuetify'
 import router from '@core/router'
 
-import '@/scss/style.scss'
+import '@/assets/scss/style.scss'
+
 import { PerfectScrollbarPlugin } from 'vue3-perfect-scrollbar'
 import VueApexCharts from 'vue3-apexcharts'
 import VueTablerIcons from 'vue-tabler-icons'
-
-// import SvgSprite from '@/components/shared/SvgSprite.vue'
 
 // google-fonts
 import '@fontsource/roboto/400.css'
@@ -44,7 +43,6 @@ fakeBackend()
 
 app.use(router)
 app.use(PerfectScrollbarPlugin)
-// app.component('SvgSprite', SvgSprite)
 app.use(piniaConfig)
 app.use(VueTablerIcons)
 app.use(VueApexCharts)
